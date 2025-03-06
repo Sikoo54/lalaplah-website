@@ -145,7 +145,7 @@ export default function MenuPage() {
                     key={index}
                     className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 transition-all hover:shadow-lg"
                   >
-                    <div className="relative h-48">
+                    <div className="relative h-48 lg:h-72">
                       <Image
                         src={item.image || "/placeholder.svg"}
                         alt={item.name}

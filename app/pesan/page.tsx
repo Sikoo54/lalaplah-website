@@ -31,8 +31,8 @@ export default function OrderPage() {
               onClick={() => setActiveTab("delivery")}
               className={`py-2 font-medium ${
                 activeTab === "delivery"
-                  ? "bg-gray-200 text-gray-800"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  ? "bg-gray-300 text-gray-800"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-300"
               }`}
             >
               Pesan Antar
@@ -41,8 +41,8 @@ export default function OrderPage() {
               onClick={() => setActiveTab("pickup")}
               className={`py-2 font-medium ${
                 activeTab === "pickup"
-                  ? "bg-gray-200 text-gray-800"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  ? "bg-gray-300 text-gray-800"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-300"
               }`}
             >
               Ambil Sendiri
