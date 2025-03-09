@@ -17,6 +17,12 @@ export default function LocationPage() {
             <div className="h-full w-full flex items-center justify-center bg-gray-200">
               <div className="text-center p-0">
                 <MapPin className="h-12 w-12 mx-auto text-orange-500 mb-4" />
+                <p className="text-gray-700 font-medium">
+                  Di sini akan ditampilkan peta lokasi LalapLah!
+                </p>
+                <p className="text-gray-500 text-sm mt-2">
+                  Jl. Pahlawan No. 123, Denpasar, Bali
+                </p>
               </div>
             </div>
           </div>
