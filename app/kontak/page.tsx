@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import Link from "next/link"
-import { MapPin, Phone, Mail, Clock } from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -12,39 +12,42 @@ export default function ContactPage() {
     email: "",
     phone: "",
     message: "",
-  })
+  });
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormState((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormState((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
     // Simulate form submission
     setTimeout(() => {
-      setIsSubmitting(false)
-      setIsSubmitted(true)
+      setIsSubmitting(false);
+      setIsSubmitted(true);
       setFormState({
         name: "",
         email: "",
         phone: "",
         message: "",
-      })
-    }, 1500)
-  }
+      });
+    }, 1500);
+  };
 
   return (
     <main className="min-h-screen py-12 px-4">
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold text-center mb-4">Hubungi Kami</h1>
         <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          Kami senang mendengar dari Anda. Kirimkan pesan, pertanyaan, atau saran Anda melalui formulir di bawah ini.
+          Kami senang mendengar dari Anda. Kirimkan pesan, pertanyaan, atau
+          saran Anda melalui formulir di bawah ini.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -54,16 +57,25 @@ export default function ContactPage() {
               <div className="text-center py-12">
                 <div className="bg-green-100 text-green-700 p-4 rounded-lg mb-6">
                   <h3 className="text-xl font-semibold mb-2">Terima Kasih!</h3>
-                  <p>Pesan Anda telah berhasil dikirim. Kami akan segera menghubungi Anda.</p>
+                  <p>
+                    Pesan Anda telah berhasil dikirim. Kami akan segera
+                    menghubungi Anda.
+                  </p>
                 </div>
-                <button onClick={() => setIsSubmitted(false)} className="btn-primary">
+                <button
+                  onClick={() => setIsSubmitted(false)}
+                  className="btn-primary"
+                >
                   Kirim Pesan Lain
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
                     Nama Lengkap
                   </label>
                   <input
@@ -78,7 +90,10 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
                     Email
                   </label>
                   <input
@@ -93,7 +108,10 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
                     Nomor Telepon
                   </label>
                   <input
@@ -107,7 +125,10 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
                     Pesan
                   </label>
                   <textarea
@@ -120,7 +141,11 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <button type="submit" className="w-full btn-primary" disabled={isSubmitting}>
+                <button
+                  type="submit"
+                  className="w-full btn-primary"
+                  disabled={isSubmitting}
+                >
                   {isSubmitting ? "Mengirim..." : "Kirim Pesan"}
                 </button>
               </form>
@@ -140,7 +165,19 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Alamat</h3>
                     <p className="text-gray-600">Jl. Pahlawan No. 123</p>
-                    <p className="text-gray-600">Kota Surabaya, Jawa Timur</p>
+                    <p className="text-gray-600">Denpasar, Bali</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="bg-orange-100 p-3 rounded-full mr-4">
+                    <Clock className="h-6 w-6 text-orange-500" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-1">Jam Buka</h3>
+                    <p className="text-gray-600">
+                      Senin - Minggu: 10:00 - 22:00 WITA
+                    </p>
                   </div>
                 </div>
 
@@ -149,7 +186,9 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-orange-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">Telepon</h3>
+                    <h3 className="text-lg font-semibold mb-1">
+                      Telepon / WhatsApp
+                    </h3>
                     <p className="text-gray-600">0812-3456-7890</p>
                   </div>
                 </div>
@@ -160,17 +199,17 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email</h3>
-                    <p className="text-gray-600">lalapanenak@email.com</p>
+                    <p className="text-gray-600">lalaplah@gmail.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="bg-orange-100 p-3 rounded-full mr-4">
-                    <Clock className="h-6 w-6 text-orange-500" />
+                    <Instagram className="h-6 w-6 text-orange-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">Jam Buka</h3>
-                    <p className="text-gray-600">Senin - Minggu: 10:00 - 22:00 WIB</p>
+                    <h3 className="text-lg font-semibold mb-1">Instagram</h3>
+                    <p className="text-gray-600">@LalapLah!</p>
                   </div>
                 </div>
               </div>
@@ -179,12 +218,17 @@ export default function ContactPage() {
             <div className="bg-white rounded-lg shadow-md p-8">
               <h2 className="text-2xl font-bold mb-6">Reservasi</h2>
               <p className="text-gray-600 mb-4">
-                Untuk reservasi meja atau acara khusus, silakan hubungi kami melalui telepon atau email.
+                Untuk reservasi meja atau acara khusus, silakan hubungi kami
+                melalui telepon atau email.
               </p>
               <p className="text-gray-600 mb-4">
-                Kami menyediakan paket khusus untuk acara ulang tahun, pertemuan keluarga, atau acara bisnis.
+                Kami menyediakan paket khusus untuk acara ulang tahun, pertemuan
+                keluarga, atau acara bisnis.
               </p>
-              <Link href="tel:+6281234567890" className="btn-primary inline-block">
+              <Link
+                href="tel:+6281234567890"
+                className="btn-primary inline-block"
+              >
                 Hubungi untuk Reservasi
               </Link>
             </div>
@@ -192,6 +236,5 @@ export default function ContactPage() {
         </div>
       </div>
     </main>
-  )
+  );
 }
-

@@ -94,9 +94,14 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                name: "Sacha Ahsan Firmansyah",
+                name: "Sacha Ahsan ",
                 role: "Chief Executive Officer",
                 image: "/profile.jpg?height=300&width=300",
+              },
+              {
+                name: "Gordon Ramsay",
+                role: "Head Chef",
+                image: "/Gordon.png?height=300&width=300",
               },
               {
                 name: "Elon Musk",
@@ -104,14 +109,9 @@ export default function AboutPage() {
                 image: "/elon.jpg?height=300&width=300",
               },
               {
-                name: "Agus Wijaya",
-                role: "Head Chef",
-                image: "/placeholder.svg?height=300&width=300",
-              },
-              {
-                name: "Dewi Lestari",
-                role: "Manajer Pelayanan",
-                image: "/placeholder.svg?height=300&width=300",
+                name: "Mr Beast",
+                role: "Marketing Manager",
+                image: "/mrbeast.png?height=300&width=300",
               },
             ].map((person, index) => (
               <div

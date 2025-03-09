@@ -181,7 +181,7 @@ export default function OrderPage() {
                 Anda dapat mengambil pesanan Anda selama jam operasional kami:
               </p>
               <p className="text-gray-700 font-medium">
-                Setiap Hari: 10:00 - 22:00 WIB
+                Setiap Hari: 10:00 - 22:00 WITA
               </p>
             </div>
           </div>
