@@ -16,7 +16,7 @@ export default function LocationPage() {
             {/* Placeholder for map - in a real project, you would embed Google Maps here */}
             <div className="h-full w-full flex items-center justify-center bg-gray-200">
               <div className="text-center p-0">
-                <img src="jl-pahlawan.png" alt="" />
+                <MapPin className="h-12 w-12 mx-auto text-orange-500 mb-4" />
               </div>
             </div>
           </div>
